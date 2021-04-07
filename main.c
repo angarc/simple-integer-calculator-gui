@@ -85,8 +85,6 @@ void process_input(GtkWidget *num_button, gpointer data)
 {
   if (processing_first_number) {
     char *num1 = ((struct number_container *)data)->num1;
-    printf("%c", gtk_button_get_label((GtkButton *)num_button)[0]);
-    printf("\n");
     num1[num1_i++] = gtk_button_get_label((GtkButton *)num_button)[0];
     gtk_label_set_text((GtkLabel *)screen_text, num1);
   } else {
@@ -157,6 +155,7 @@ void add_num_buttons(GtkWidget* number_grid, struct number_container *numbers)
 
 // gcc 007_gtk.c -o 007_gtk `pkg-config --cflags gtk+-3.0` `pkg-config --libs gtk+-3.0`
 int main(int argc, char **argv) {
+  printf("Please ignore the following error:\n");
   GtkWidget *window, *calculator, *number_grid, *operator_grid;
   gtk_init(&argc, &argv);
 
