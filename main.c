@@ -2,14 +2,9 @@
 #include <stdio.h>
 #include <gtk/gtk.h>
 
-static GtkWidget *number1;
-static GtkWidget *number2;
-static GtkWidget *result;
-
 int num1_i = 0;
 int num2_i = 0;
-static int processing_first_number = 1;
-
+int processing_first_number = 1;
 static GtkWidget *screen_text;
 
 int operation = 0;
